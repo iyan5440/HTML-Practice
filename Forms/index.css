@@ -1,12 +1,7 @@
-head{
-    background-color: aquamarine;
-}
 body{
     background-color: aquamarine;
+    
 }
-input{
+input, button{
     background-color: beige;
-}
-button{
-    /*background-color: blanchedalmond;*/
 }

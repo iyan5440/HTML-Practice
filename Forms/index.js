@@ -1,7 +1,7 @@
 function say(name) {
     console.log(name);
 }
-function home() {
+function main() {
     let x = 6;
     console.log(x);
     if (x > 5) {

@@ -6,21 +6,31 @@ input, button{
     
     background-color: beige;
 }
-.square{
-    list-style-type: square;
+
+ul{
+    color: beige;
 }
+
 .box {
-    margin: 40px;
-    width: 100px;
-    height: 100px;
+    top: 50px;
+    margin: 0 auto;
+    width: 224px;
+    height: 120px;
     border: 5px solid black;
     background-color: rebeccapurple;
-    transform: rotate(0.8turn);
     
   }
-  .center{
+.center{
     position: relative;
-    left: 50%;
+    left: 0%;
     flex-wrap: wrap;
     justify-content: center;
-  }
+}
+.txtcenter{
+      margin: 0 auto;
+      text-align: center;
+      
+}
+
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Basic node app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyan5440/HTML-Practice.git#main"
+  },
+  "author": "Iyan5440",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iyan5440/HTML-Practice/issues"
+  },
+  "homepage": "https://github.com/iyan5440/HTML-Practice/tree/main#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

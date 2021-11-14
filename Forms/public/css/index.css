@@ -7,7 +7,7 @@ input, button{
     background-color: beige;
 }
 
-ul{
+ul, h3{
     color: beige;
 }
 
@@ -15,7 +15,7 @@ ul{
     top: 50px;
     margin: 0 auto;
     width: 224px;
-    height: 120px;
+    height: 170px;
     border: 5px solid black;
     background-color: rebeccapurple;
     

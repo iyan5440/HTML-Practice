@@ -1,7 +1,7 @@
 function say(name) {
     console.log(name);
 }
-function main() {
+function test() {
     let x = 6;
     console.log(x);
     if (x > 5) {
@@ -23,3 +23,4 @@ function main() {
 
     console.log(seledt);
 }
+

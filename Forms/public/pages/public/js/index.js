@@ -18,7 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 //import { getDatabase, ref, set } from "/node_modules/firebase/database";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"
+import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"
 
 function writeUserData(userId, name, score) {
   const db = getDatabase(app);
@@ -28,10 +28,26 @@ function writeUserData(userId, name, score) {
   });
 }
 
+//import { /*getDatabase, */ref, child, get } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+
+function readUserData() {
+  const dbRef = ref(getDatabase());
+  get(child(dbRef, `users/`)).then((snapshot) => { //${userId}
+    if (snapshot.exists()) {
+      console.log(snapshot.val());
+    } else {
+      console.log("No data available");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+}
+
 function submit(){
     const name = document.getElementById('name').value;
     const score = document.getElementById('score').value;
     writeUserData(name, name, score);
+    readUserData();
     
 }
 

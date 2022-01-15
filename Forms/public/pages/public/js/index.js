@@ -34,9 +34,18 @@ function readUserData() {
   const dbRef = ref(getDatabase());
   get(child(dbRef, `users/`)).then((snapshot) => { //${userId}
     if (snapshot.exists()) {
-      console.log(snapshot.val());
-    } else {
-      console.log("No data available");
+      document.getElementById('print').innerHTML = "";
+      for (const property in snapshot.val()) {
+        var snapshotVal = snapshot.val()[property];
+        //console.log(`${snapshotVal.Username}: ${snapshotVal.Score}`);
+        //console.log(snapshot.val());
+        // will output something like: "name: John"
+        
+        document.getElementById('print').innerHTML +=  '<li>' + `${snapshotVal.Username}: ${snapshotVal.Score}` + '</li>';
+      } 
+      //console.log(snapshot.val().value);
+      //snapshot.val().Username + " " + snapshot.val().Score
+      //console.log("No data available");
     }
   }).catch((error) => {
     console.error(error);

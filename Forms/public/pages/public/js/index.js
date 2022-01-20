@@ -17,26 +17,32 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+
 //import { getDatabase, ref, set } from "/node_modules/firebase/database";
 import { getDatabase, ref, set, child, get } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"
 
+
 function writeUserData(userId, name, score) {
   const db = getDatabase(app);
+  
   set(ref(db, 'users/' + userId), {
     Username: name,
     Score: score
   });
 }
 
+var idCount =0;
 //import { /*getDatabase, */ref, child, get } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
 
-function readUserData() {
+function readUserData(idCount) {
   const dbRef = ref(getDatabase());
   get(child(dbRef, `users/`)).then((snapshot) => { //${userId}
     if (snapshot.exists()) {
+      
       document.getElementById('print').innerHTML = "";
       for (const property in snapshot.val()) {
         var snapshotVal = snapshot.val()[property];
+        
         //console.log(`${snapshotVal.Username}: ${snapshotVal.Score}`);
         //console.log(snapshot.val());
         // will output something like: "name: John"
@@ -55,8 +61,12 @@ function readUserData() {
 function submit(){
     const name = document.getElementById('name').value;
     const score = document.getElementById('score').value;
-    writeUserData(name, name, score);
-    readUserData();
+    idCount++;
+    if(idCount<5){
+      writeUserData(name, name, score);
+      readUserData(idCount);
+    }
+    
     
 }
 

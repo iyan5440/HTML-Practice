@@ -2,17 +2,34 @@ body{
     background-color: aquamarine;
     
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowcontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin:10px;
+}
+
+
+
 input, button{
-    
     background-color: beige;
 }
+
 
 ul, h3{
     color: beige;
 }
 
 .box {
-    top: 50px;
+    top: 30px;
     margin: 0 auto;
     width: 224px;
     height: 170px;

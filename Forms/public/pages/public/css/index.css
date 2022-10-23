@@ -29,13 +29,10 @@ ul, h3{
 }
 
 .box {
-    top: 30px;
-    margin: 0 auto;
-    width: 224px;
-    height: 170px;
+    max-width: 30%;
+    min-width: 224px;
     border: 5px solid black;
     background-color: rebeccapurple;
-    
   }
 .center{
     position: relative;

@@ -62,6 +62,7 @@ function submit(){
     const name = document.getElementById('name').value;
     const score = document.getElementById('score').value;
     idCount++;
+    console.log(idCount);
     if(idCount<5){
       writeUserData(name, name, score);
       readUserData(idCount);
